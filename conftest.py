@@ -11,8 +11,8 @@ def testing():
     pytest.driver.implicitly_wait(10)
     pytest.driver.get('http://petfriends.skillfactory.ru/login')
     pytest.driver.maximize_window()
-    pytest.driver.find_element(By.ID, 'email').send_keys('elvira.khisamova@gmail.com')
-    pytest.driver.find_element(By.ID, 'pass').send_keys('test123')
+    pytest.driver.find_element(By.ID, 'email').send_keys('<your email>')
+    pytest.driver.find_element(By.ID, 'pass').send_keys('<your password>')
     pytest.driver.implicitly_wait(10)
     WebDriverWait(pytest.driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']"))).click()
